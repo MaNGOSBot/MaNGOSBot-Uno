@@ -52,7 +52,7 @@
 #include "AttackerWithoutAuraTargetValue.h"
 #include "LastSpellCastTimeValue.h"
 #include "ManaSaveLevelValue.h"
-//#include "LfgValues.h"
+#include "LfgValues.h"
 #include "EnemyHealerTargetValue.h"
 #include "Formations.h"
 #include "ItemUsageValue.h"
@@ -148,7 +148,7 @@ namespace ai
             creators["invalid target"] = &ValueContext::invalid_target;
             creators["mana save level"] = &ValueContext::mana_save_level;
             creators["combat"] = &ValueContext::combat;
-           // creators["lfg proposal"] = &ValueContext::lfg_proposal;
+            creators["lfg proposal"] = &ValueContext::lfg_proposal;
             creators["bag space"] = &ValueContext::bag_space;
             creators["enemy healer target"] = &ValueContext::enemy_healer_target;
             creators["formation"] = &ValueContext::formation;
@@ -247,7 +247,7 @@ namespace ai
         static UntypedValue* has_totem(PlayerbotAI* ai) { return new HasTotemValue(ai); }
         static UntypedValue* threat(PlayerbotAI* ai) { return new ThreatValue(ai); }
         static UntypedValue* combat(PlayerbotAI* ai) { return new IsInCombatValue(ai); }
-        //static UntypedValue* lfg_proposal(PlayerbotAI* ai) { return new LfgProposalValue(ai); }
+        static UntypedValue* lfg_proposal(PlayerbotAI* ai) { return new LfgProposalValue(ai); }
         static UntypedValue* bag_space(PlayerbotAI* ai) { return new BagSpaceValue(ai); }
         static UntypedValue* enemy_healer_target(PlayerbotAI* ai) { return new EnemyHealerTargetValue(ai); }
         static UntypedValue* speed(PlayerbotAI* ai) { return new SpeedValue(ai); }

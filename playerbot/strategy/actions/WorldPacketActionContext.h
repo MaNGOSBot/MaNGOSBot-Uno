@@ -20,7 +20,7 @@
 #include "TellCastFailedAction.h"
 #include "AcceptDuelAction.h"
 #include "ReadyCheckAction.h"
-//#include "LfgActions.h"
+#include "LfgActions.h"
 #include "SecurityCheckAction.h"
 #include "GuildAcceptAction.h"
 

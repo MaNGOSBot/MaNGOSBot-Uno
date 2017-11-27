@@ -49,7 +49,7 @@ public:
     uint32 minRandomBotPvpTime, maxRandomBotPvpTime;
     uint32 minRandomBotsPerInterval, maxRandomBotsPerInterval;
     uint32 minRandomBotsPriceChangeInterval, maxRandomBotsPriceChangeInterval;
-   // bool randomBotJoinLfg;
+    bool randomBotJoinLfg;
     bool randomBotLoginAtStartup;
     uint32 randomBotTeleLevel;
     bool logInGroupOnly, logValuesPerTick;

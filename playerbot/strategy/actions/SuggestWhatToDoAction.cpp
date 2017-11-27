@@ -209,7 +209,7 @@ void SuggestWhatToDoAction::spam(string msg, uint32 channelId)
 
             if (ChannelMgr* cMgr = channelMgr(bot->GetTeam()))
             {
-                if (Channel* chn = cMgr->GetJoinChannel(channelName, channelId))
+                if (Channel* chn = cMgr->GetJoinChannel(channelName))
                 {
                     chn->Join(bot, "");
                     chn->Say(bot, msg.c_str(), LANG_UNIVERSAL);

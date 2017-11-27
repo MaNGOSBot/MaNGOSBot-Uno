@@ -26,7 +26,6 @@ uint32 PlayerbotFactory::tradeSkills[] =
     SKILL_BLACKSMITHING,
     SKILL_COOKING,
     SKILL_FIRST_AID,
-	SKILL_JEWELCRAFTING,
     SKILL_FISHING
 };
 
@@ -94,7 +93,7 @@ void PlayerbotFactory::Randomize(bool incremental)
     bot->SaveToDB();
 
     sLog.outDetail("Initializing quests...");
-    //InitQuests();
+    InitQuests();
     // quest rewards boost bot level, so reduce back
     bot->SetLevel(level);
     ClearInventory();

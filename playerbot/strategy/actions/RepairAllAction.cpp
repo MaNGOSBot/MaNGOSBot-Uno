@@ -18,11 +18,8 @@ bool RepairAllAction::Execute(Event event)
             bot->RemoveSpellsCausingAura(SPELL_AURA_FEIGN_DEATH);
 
         bot->SetFacingToObject(unit);
-
-		uint8 guildBank;                                        // new in 2.3.2, bool that means from guild bank money
-
         float discountMod = bot->GetReputationPriceDiscount(unit);
-        uint32 totalCost = bot->DurabilityRepairAll(true, discountMod, (guildBank > 0));
+        uint32 totalCost = bot->DurabilityRepairAll(true, discountMod);
 
         ostringstream out;
         out << "Repair: " << chat->formatMoney(totalCost) << " (" << unit->GetName() << ")";
